@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#25392f">
+  <title>ACBuy spreadsheet: kleding, sneakers &amp; QC-gids | cafans.com</title>
+  <meta name="description" content="Ontdek de ACBuy spreadsheet-gids voor sneakers, kleding en accessoires. Vergelijk maten, bekijk QC-aandachtspunten en verken categorieën bij cafans.com.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="ACBuy spreadsheet — kies met aandacht">
+  <meta property="og:description" content="Een onafhankelijke Nederlandstalige gids voor productlinks, pasvorm, QC-foto’s en een doordachte selectie.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ACBuy spreadsheet — kies met aandacht">
+  <meta name="twitter:description" content="Van sneakers tot accessoires: categorieën, praktische koopgidsen en heldere antwoorden.">
+  <link rel="preconnect" href="https://cdn.sneakers123.com" crossorigin>
+  <!--
+    Bestandsnaam: index.html
+    Onderzoeksbeperking: de Bing-resultatenpagina was niet bereikbaar.
+    Daarom kan de exacte eerste Bing-pagina of de positie van tien websites
+    niet worden bevestigd. Alternatieve webzoekresultaten leverden deze
+    tien onderzoeksdomeinen op:
+    acbuy.net, ac-sheet.com, acbuy.io, acbuy.org, acbuyspreadsheet.com,
+    acbuy.fun, acbuy.vip, acbuyspreadsheet.net, acbuy.group, sheets-acbuy.com.
+    Terugkerende onderwerpen: categorieën, productlinks, QC, maattabellen,
+    productvergelijking en verzending. Geen externe prijzen, beoordelingen,
+    voorraadaantallen of kwaliteitsclaims zijn overgenomen.
+    Secundaire zoekthema’s: ACBuy finds; ACBuy QC;
+    ACBuy sneakers; ACBuy kleding.
+    Gerelateerde zoekintenties worden verwerkt in de zichtbare koopgidsen.
+    Voeg na publicatie alleen een canonical en og:url toe met het echte
+    adres van deze pagina.
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f5ed;
+      --white: #fffefa;
+      --ink: #24372e;
+      --muted: #59665e;
+      --line: #d6dbcf;
+      --green: #25392f;
+      --lime: #d9ed97;
+      --soft: #ebefdf;
+      --accent: #875536;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3 { line-height: 1.13; text-wrap: balance; }
+    h1 { font-size: clamp(2.8rem, 6vw, 5.6rem); letter-spacing: -.065em; font-weight: 750; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -.045em; }
+    h3 { font-size: 1.22rem; letter-spacing: -.025em; }
+    p { text-wrap: pretty; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      font-size: .74rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+    .muted { color: var(--muted); }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo { font-size: 1.5rem; font-weight: 850; letter-spacing: -.055em; text-decoration: none; }
+    .topbar p { font-size: .82rem; color: var(--muted); }
+    .topbar .visit { font-size: .87rem; font-weight: 700; white-space: nowrap; }
+    .directory { padding-block: 24px 30px; }
+    .directory-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 13px;
+    }
+    .directory h2 { font-size: 1rem; letter-spacing: 0; }
+    .directory-head p { font-size: .8rem; color: var(--muted); }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+    .categories a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 12px 13px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      font-size: .82rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .categories a::after { content: "↗"; color: var(--muted); }
+    .categories a:hover { background: var(--soft); border-color: #839476; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      background: var(--green);
+      color: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .hero-copy { padding: clamp(28px, 5vw, 60px); }
+    .hero .eyebrow { color: var(--lime); }
+    .hero h1 span { display: block; margin-top: 15px; color: var(--lime); font-size: .6em; letter-spacing: -.045em; }
+    .hero-copy > p { margin-top: 24px; color: #e1e7de; max-width: 46ch; }
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      min-height: 48px;
+      margin-top: 27px;
+      padding: 12px 21px;
+      background: var(--lime);
+      color: var(--ink);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: .93rem;
+    }
+    .button:hover { background: #e7f6b9; }
+    .hero-visual { display: flex; flex-direction: column; background: #fff; color: var(--ink); }
+    .hero-image {
+      flex: 1;
+      display: grid;
+      align-items: center;
+      padding: 30px;
+      min-height: 330px;
+    }
+    .hero-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; }
+    .hero-visual figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 27px;
+      background: var(--soft);
+      font-size: .85rem;
+    }
+    .hero-visual figcaption span { color: var(--muted); font-size: .76rem; }
+    .intro {
+      display: grid;
+      grid-template-columns: .6fr 1.4fr;
+      gap: 50px;
+      padding-block: 54px;
+      border-bottom: 1px solid var(--line);
+    }
+    .intro h2 { font-size: 1.55rem; }
+    .intro p + p { margin-top: 13px; }
+    .section { padding-block: 60px; }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .section-heading > p { color: var(--muted); font-size: .95rem; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+    .look { border: 1px solid var(--line); border-radius: 10px; background: var(--white); overflow: hidden; }
+    .look-image { display: block; padding: 18px; background: white; }
+    .look-image img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+    .look figcaption { padding: 20px; border-top: 1px solid var(--line); }
+    .look .label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+    .look h3 { margin-top: 8px; font-size: 1.1rem; }
+    .look p { margin-top: 10px; font-size: .86rem; color: var(--muted); }
+    .look .text-link { display: inline-block; margin-top: 15px; font-size: .84rem; font-weight: 700; }
+    .image-note { margin-top: 15px; color: var(--muted); font-size: .77rem; }
+    .method {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 50px;
+      padding: 36px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .method h2 { font-size: 2.1rem; }
+    .method-intro p { margin-top: 18px; }
+    .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+    .steps li { position: relative; counter-increment: step; padding-left: 47px; }
+    .steps li::before {
+      content: counter(step, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: .8rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .steps li + li { margin-top: 23px; padding-top: 20px; border-top: 1px solid #cbd2bd; }
+    .steps li + li::before { top: 20px; }
+    .steps h3 { font-size: 1.05rem; }
+    .steps p { margin-top: 7px; color: var(--muted); font-size: .9rem; }
+    .journal { padding-block: 60px 20px; }
+    .article-row {
+      display: grid;
+      grid-template-columns: 75px .85fr 1.15fr;
+      gap: 30px;
+      padding-block: 30px;
+      border-top: 1px solid var(--line);
+    }
+    .article-number { color: var(--accent); font-size: .8rem; font-weight: 750; }
+    .article-row h3 { font-size: 1.4rem; }
+    .article-row p { color: var(--muted); font-size: .94rem; }
+    .article-row p + p { margin-top: 13px; }
+    .article-row strong { color: var(--ink); }
+    .table-wrap { overflow-x: auto; margin-top: 28px; border: 1px solid var(--line); border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; background: var(--white); font-size: .9rem; }
+    th, td { padding: 17px 19px; text-align: left; vertical-align: top; }
+    thead { background: var(--green); color: var(--white); }
+    tbody tr + tr { border-top: 1px solid var(--line); }
+    tbody th { width: 22%; }
+    .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 55px; }
+    .faq-layout header p { margin-top: 20px; color: var(--muted); }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { padding: 20px 8px; cursor: pointer; font-weight: 700; line-height: 1.5; }
+    details p { padding: 0 8px 23px; color: var(--muted); font-size: .93rem; }
+    .closing {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 35px;
+      background: var(--lime);
+      border-radius: var(--radius);
+      margin-bottom: 45px;
+    }
+    .closing h2 { font-size: 1.8rem; }
+    .closing p { margin-top: 9px; }
+    .closing .button { margin: 0; color: white; background: var(--green); white-space: nowrap; }
+    footer { padding-block: 28px 36px; border-top: 1px solid var(--line); font-size: .8rem; color: var(--muted); }
+    .footer-top { display: flex; justify-content: space-between; gap: 25px; margin-bottom: 17px; }
+    footer p { max-width: 95ch; }
+    @media (max-width: 980px) {
+      .categories { grid-template-columns: repeat(3, 1fr); }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .hero-copy { padding: 32px; }
+      .hero-image { padding: 18px; min-height: 270px; }
+      .method { gap: 30px; padding: 28px; }
+      .article-row { grid-template-columns: 45px .9fr 1.1fr; gap: 20px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 28px, 1180px); }
+      .topbar { padding-block: 18px; }
+      .topbar p { display: none; }
+      .directory { padding-block: 20px; }
+      .directory-head { display: block; }
+      .directory-head p { margin-top: 5px; }
+      .categories { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+      .categories a { font-size: .75rem; padding: 11px 10px; }
+      .hero, .intro, .section-heading, .method, .faq-layout { grid-template-columns: 1fr; }
+      .hero-copy { padding: 30px 24px; }
+      .hero-image { min-height: 220px; padding: 16px 25px; }
+      .hero-image img { max-height: 250px; }
+      .hero-visual figcaption { padding: 16px 23px; }
+      .intro { padding-block: 35px; gap: 20px; }
+      .section, .journal { padding-block: 40px; }
+      .section-heading { gap: 17px; }
+      .gallery { gap: 10px; }
+      .look-image { padding: 10px; }
+      .look figcaption { padding: 15px 12px; }
+      .look h3 { font-size: 1rem; }
+      .look p { font-size: .8rem; }
+      .method { padding: 25px 20px; gap: 25px; }
+      .article-row { grid-template-columns: 30px 1fr; gap: 14px; }
+      .article-row .article-body { grid-column: 2; }
+      .faq-layout { gap: 25px; }
+      .closing { flex-direction: column; align-items: flex-start; padding: 27px 23px; }
+      .footer-top { flex-direction: column; gap: 8px; }
+      th, td { padding: 13px; min-width: 130px; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .categories a, .button { transition: background-color .15s ease; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "#webpage",
+        "name": "ACBuy spreadsheet: kleding, sneakers & QC-gids",
+        "description": "Een onafhankelijke Nederlandstalige gids voor productlinks, pasvorm, QC-foto’s en een doordachte selectie.",
+        "inLanguage": "nl",
+        "about": {
+          "@type": "Thing",
+          "name": "ACBuy spreadsheet"
+        },
+        "hasPart": [
+          {"@id": "#artikel-pasvorm"},
+          {"@id": "#artikel-qc"},
+          {"@id": "#artikel-kosten"},
+          {"@id": "#faq"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "#artikel-pasvorm",
+        "headline": "ACBuy kleding: meet eerst je favoriete kledingstuk",
+        "description": "Vergelijk borstbreedte, schouderbreedte, ruglengte, taille en binnenbeenlengte met de maattabel van de gekozen variant.",
+        "inLanguage": "nl",
+        "isPartOf": {"@id": "#webpage"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artikel-qc",
+        "headline": "ACBuy QC: vraag om beelden die een vraag beantwoorden",
+        "description": "Controleer de juiste variant, zichtbare afwerking en relevante afmetingen. QC-foto’s bewijzen geen authenticiteit.",
+        "inLanguage": "nl",
+        "isPartOf": {"@id": "#webpage"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artikel-kosten",
+        "headline": "Van productprijs naar een compleet kostenoverzicht",
+        "description": "Noteer productprijs, binnenlandse verzending, servicekosten, internationale verzending en eventuele invoerkosten afzonderlijk.",
+        "inLanguage": "nl",
+        "isPartOf": {"@id": "#webpage"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#faq",
+        "inLanguage": "nl",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat is een ACBuy spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Een ACBuy spreadsheet is een overzicht van productverwijzingen dat wordt gebruikt om artikelen te ontdekken en te vergelijken. Deze pagina biedt een Nederlandstalige lees- en koopgids met categorielinks naar cafans.com; er wordt hier geen spreadsheetbestand aangeboden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Waar brengen de links op deze pagina mij naartoe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De categorielinks openen de genoemde categorie op cafans.com. Alle overige klikbare links openen https://www.cafans.com. Deze pagina verwerkt geen bestellingen of betalingen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe kies ik een maat bij sneakers en kleding?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vergelijk de maattabel van de exacte variant met je eigen metingen. Gebruik bij sneakers de voetlengte en de beschikbare binnenmaat; vergelijk kleding met een goed passend kledingstuk. Alleen een EU-maat of lettermaat is onvoldoende."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bewijzen QC-foto’s dat een merkartikel authentiek is?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. QC-foto’s kunnen zichtbare kenmerken, de gekozen variant en mogelijke afwijkingen tonen. Ze bewijzen geen authenticiteit, materiaalsamenstelling of levensduur. Vraag bij merkartikelen om controleerbare herkomstgegevens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Zijn de afgebeelde merkartikelen hier te bestellen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De afbeeldingen zijn stijlreferenties voor de uitleg. Ze bevestigen geen beschikbaarheid of identiek aanbod bij cafans.com. Controleer op de bestemming de actuele productomschrijving en de geselecteerde uitvoering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe vergelijk ik verzendkosten naar Nederland of België?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vergelijk een offerte voor hetzelfde pakket, dezelfde bestemming en dezelfde verpakkingskeuze. Controleer het gebruikte gewicht, de pakketafmetingen, routevoorwaarden en eventuele extra kosten. Een artikelprijs alleen geeft geen compleet kostenoverzicht."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is deze gids officieel verbonden aan ACBuy of de genoemde merken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. Dit is een onafhankelijke informatiepagina met verwijzingen naar cafans.com. Er wordt geen officiële samenwerking met ACBuy, Nike, Louis Vuitton, Gucci, Hermès of Dior geclaimd."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/oygfg/">
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="logo" href="https://www.cafans.com" aria-label="Ga naar cafans.com">cafans.com</a>
+    <p>De garderobenotities · Nederlandstalige gids</p>
+    <a class="visit" href="https://www.cafans.com">Verken cafans ↗</a>
+  </header>
+
+  <main class="wrap">
+    <nav class="directory" aria-label="Productcategorieën op cafans.com">
+      <div class="directory-head">
+        <h2>Begin bij een categorie</h2>
+        <p>Rechtstreeks naar de bijbehorende selectie op cafans.com</p>
+      </div>
+      <div class="categories">
+        <a href="https://cafans.com/category-911-Shoes.html">Shoes</a>
+        <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a>
+        <a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a>
+        <a href="https://cafans.com/category-914-Jackets.html">Jackets</a>
+        <a href="https://cafans.com/category-915-Pants%2FShorts.html">Pants/Shorts</a>
+        <a href="https://cafans.com/category-916-Headwear.html">Headwear</a>
+        <a href="https://cafans.com/category-917-Sets.html">Sets</a>
+        <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a>
+        <a href="https://cafans.com/category-919-Jersey.html">Jersey</a>
+        <a href="https://cafans.com/category-920-Accessories.html">Accessories</a>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">Een gids voor bewuste selectie</span>
+        <h1 id="hero-title">ACBuy spreadsheet<span>Kijk verder.<br>Kies gerichter.</span></h1>
+        <p>Een goede selectie begint met de juiste vragen. Bekijk de pasvorm, vergelijk de uitvoering en bepaal welke details je wilt controleren voordat je een keuze maakt.</p>
+        <a class="button" href="https://www.cafans.com">Ontdek kleding en accessoires <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="hero-visual">
+        <div class="hero-image">
+          <img
+            src="https://cdn.sneakers123.com/release/15041666/nike-air-max-2013-hf4884-100.jpg"
+            alt="Witte Nike Air Max 2013 sneaker in zijaanzicht met zichtbare luchtzool"
+            width="800"
+            height="600"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>01 / De sneaker als basis</strong>
+          <span>Nike · stijlreferentie</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Wat heb je aan een spreadsheet-gids?</h2>
+      <div>
+        <p>Een <strong>ACBuy spreadsheet</strong> helpt bij het ordenen van productverwijzingen. De nuttige informatie zit in de combinatie van de juiste link, een duidelijke omschrijving, beschikbare maten en controleerbare details.</p>
+        <p class="muted">Hier vind je een onafhankelijke Nederlandstalige koopgids en categorieroutes naar cafans.com. Je downloadt op deze pagina geen spreadsheet en plaatst hier geen bestelling. Gebruik de uitleg om productpagina’s gerichter te lezen.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="looks-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">ACBuy finds · van overzicht naar detail</span>
+          <h2 id="looks-title">Vier details voor je shortlist.</h2>
+        </div>
+        <p>Een herkenbaar ontwerp kan inspiratie geven. Laat vervolgens pasvorm, uitvoering en herkomst bepalen welke informatie je nog nodig hebt.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="look">
+          <a class="look-image" href="https://www.cafans.com" aria-label="Verken kleding op cafans.com">
+            <img
+              src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_M/louis-vuitton--FVTE22E3P107_PM2_Front%20view.jpg?hei=600&amp;wid=520"
+              alt="Wit Louis Vuitton T-shirt met goudkleurig monogrampatroon"
+              width="520" height="600" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="label">Louis Vuitton · kleding</span>
+            <h3>Het silhouet</h3>
+            <p>Vergelijk bij een T-shirt de schouderlijn, borstbreedte en lengte met je eigen garderobe.</p>
+            <a class="text-link" href="https://www.cafans.com">Bekijk cafans ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="look">
+          <a class="look-image" href="https://www.cafans.com" aria-label="Verken hoofddeksels op cafans.com">
+            <img
+              src="https://www.crepslocker.com/cdn/shop/products/dior-oblique-jacquard-navy-blue-beige-cotton-bucket-hat-293c906g5763_c189-crepslocker-front.jpg?v=1680612680&amp;width=520"
+              alt="Donkerblauwe en beige Dior Oblique bucket hat met patroon en gesp"
+              width="520" height="520" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="label">Dior · hoofddeksels</span>
+            <h3>De verhouding</h3>
+            <p>Controleer bij een bucket hat de hoofdomtrek, kroonhoogte en de breedte van de rand.</p>
+            <a class="text-link" href="https://www.cafans.com">Bekijk cafans ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="look">
+          <a class="look-image" href="https://www.cafans.com" aria-label="Verken sieraden op cafans.com">
+            <img
+              src="https://cdn.salla.sa/Eqrnx/LA1o7qmeGyZ15Bkh36Z2UakYT1TeijeIka1VDBnf.png"
+              alt="Vier Gucci armbanden met GG-details en groen-rode strepen"
+              width="520" height="520" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="label">Gucci · sieraden</span>
+            <h3>De afwerking</h3>
+            <p>Vraag bij sieraden naar afmetingen, sluiting en materiaalspecificatie van de gekozen uitvoering.</p>
+            <a class="text-link" href="https://www.cafans.com">Bekijk cafans ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="look">
+          <a class="look-image" href="https://www.cafans.com" aria-label="Verken accessoires op cafans.com">
+            <img
+              src="https://imissyouvintage.com/cdn/shop/products/image_c27fc66d-a67d-4bf9-84c4-1988519c2c91_1100x.jpg?v=1597421218&amp;width=520"
+              alt="Pols met zwarte en goudkleurige Hermès armbanden, waaronder een H-sluiting"
+              width="520" height="520" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="label">Hermès · accessoires</span>
+            <h3>Het draagcomfort</h3>
+            <p>Vergelijk de binnenomtrek van een armband met je polsmaat en gewenste bewegingsruimte.</p>
+            <a class="text-link" href="https://www.cafans.com">Bekijk cafans ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="image-note">Beelden dienen als stijlreferentie. Ze bevestigen geen identiek aanbod, beschikbaarheid, authenticiteit of merkrelatie bij cafans.com.</p>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <div class="method-intro">
+        <span class="eyebrow">Een bruikbaar selectieproces</span>
+        <h2 id="method-title">Van productlink naar een onderbouwde keuze.</h2>
+        <p class="muted">Gebruik voor elke kandidaat dezelfde controle. Zo blijft een vergelijking van sneakers, hoodies en accessoires overzichtelijk.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Leg de exacte uitvoering vast</h3>
+          <p>Noteer productlink, verkoper, kleurvariant en maat. Controleer of foto’s en beschrijving dezelfde uitvoering tonen.</p>
+        </li>
+        <li>
+          <h3>Vul ontbrekende informatie aan</h3>
+          <p>Zoek de maattabel, materiaalsamenstelling en productafmetingen. Vraag om toelichting als een meetmethode onduidelijk is.</p>
+        </li>
+        <li>
+          <h3>Bekijk relevante controlebeelden</h3>
+          <p>Gebruik beschikbare QC-foto’s voor details zoals naden, label, zool en sluiting. Een overzichtsfoto laat niet alles zien.</p>
+        </li>
+        <li>
+          <h3>Controleer het complete voorstel</h3>
+          <p>Bekijk de totale kosten, retourvoorwaarden en verzendopties bij de partij die je bestelling daadwerkelijk verwerkt.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="journal" aria-labelledby="journal-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Praktische artikelen</span>
+          <h2 id="journal-title">Drie notities vóór je beslist.</h2>
+        </div>
+        <p>Gerichte uitleg over kledingmaten, QC-beelden en kosten. Ook bruikbaar wanneer een productoverzicht weinig context geeft.</p>
+      </div>
+
+      <article class="article-row" id="artikel-pasvorm" aria-labelledby="fit-title">
+        <span class="article-number">01 /</span>
+        <h3 id="fit-title">ACBuy kleding: meet eerst je favoriete kledingstuk</h3>
+        <div class="article-body">
+          <p>Voor <strong>ACBuy T-shirts vergelijken</strong> begin je met borstbreedte, schouderbreedte en ruglengte. Leg een goed passend shirt plat en vergelijk dezelfde meetpunten met de maattabel van de gekozen variant.</p>
+          <p>Bij <strong>een hoodie met ruime pasvorm</strong> telt ook de ruimte voor een onderlaag. Controleer voor <strong>een sweater met lange mouwen</strong> de mouwlengte en boord. Vergelijk voor <strong>een jas over meerdere lagen</strong> borstomvang, schouderruimte en sluiting.</p>
+          <p>Voor <strong>broeken en shorts op maat kiezen</strong> zijn taille, heup, bovenbeen en binnenbeenlengte nuttiger dan alleen de lettermaat. Bekijk bij <strong>sets met twee delen</strong> beide maattabellen afzonderlijk. Voor <strong>ondergoed met elastische taille</strong> controleer je ook rekbaarheid en de vermelde retourvoorwaarden.</p>
+        </div>
+      </article>
+
+      <article class="article-row" id="artikel-qc" aria-labelledby="qc-title">
+        <span class="article-number">02 /</span>
+        <h3 id="qc-title">ACBuy QC: vraag om beelden die een vraag beantwoorden</h3>
+        <div class="article-body">
+          <p>Bij <strong>ACBuy QC-foto’s beoordelen</strong> begin je met de juiste maat en kleur. Bekijk daarna de <strong>afwerking van naden</strong>, de positie van opdrukken en mogelijke zichtbare beschadigingen. Vergelijk links en rechts onder dezelfde hoek.</p>
+          <p>Voor <strong>ACBuy sneakers vergelijken</strong> zijn een zijaanzicht, bovenaanzicht en zoolfoto nuttig. Een <strong>controle van de binnenmaat</strong> vereist een duidelijke meting; perspectief kan vertekenen. Bij <strong>een jersey met bedrukking</strong> let je op plaatsing, spelling en de gekozen uitvoering.</p>
+          <p>Gebruik voor <strong>hoofddeksels op maat</strong> de omtrek en bij <strong>accessoires met een sluiting</strong> een detailbeeld van het mechanisme. QC helpt bij visuele controle. Foto’s bewijzen geen authenticiteit, materiaalsamenstelling of levensduur.</p>
+        </div>
+      </article>
+
+      <article class="article-row" id="artikel-kosten" aria-labelledby="cost-title">
+        <span class="article-number">03 /</span>
+        <h3 id="cost-title">Van productprijs naar een compleet kostenoverzicht</h3>
+        <div class="article-body">
+          <p>Voor <strong>een ACBuy kostenoverzicht</strong> noteer je productprijs, binnenlandse verzending, eventuele servicekosten en internationale verzending apart. Voeg extra foto’s of verpakking alleen toe als die daadwerkelijk zijn gekozen.</p>
+          <p>Bij <strong>verzending naar Nederland vergelijken</strong> en <strong>verzending naar België vergelijken</strong> gebruik je dezelfde bestemming en pakketinhoud. Controleer of een offerte rekent met <strong>werkelijk gewicht of volumegewicht</strong> en welke toeslagen zijn vermeld.</p>
+          <p>Bekijk vóór betaling ook <strong>de retourtermijn van een artikel</strong>, <strong>de opslagvoorwaarden van een pakket</strong> en eventuele invoerkosten. Sla de actuele offerte op. Een schatting is pas vergelijkbaar wanneer de uitgangspunten overeenkomen.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="comparison-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Categorie voor categorie</span>
+          <h2 id="comparison-title">Welke gegevens maken het verschil?</h2>
+        </div>
+        <p>Gebruik deze compacte controlelijst wanneer je productlinks bekijkt. Ontbrekende informatie is een reden om eerst een vraag te stellen.</p>
+      </div>
+      <div class="table-wrap" role="region" aria-label="Selectiecriteria per productgroep" tabindex="0">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Productgroep</th>
+              <th scope="col">Vergelijk eerst</th>
+              <th scope="col">Vraag bij twijfel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Sneakers</th>
+              <td>Voetlengte, maattabel, modelvariant en breedte.</td>
+              <td>Hoe is de binnenlengte gemeten?</td>
+            </tr>
+            <tr>
+              <th scope="row">T-shirts en hoodies</th>
+              <td>Borstbreedte, ruglengte, schouders en stofomschrijving.</td>
+              <td>Zijn de maten plat gemeten of als omtrek vermeld?</td>
+            </tr>
+            <tr>
+              <th scope="row">Jassen en sets</th>
+              <td>Ruimte voor lagen, sluitingen en afmetingen per onderdeel.</td>
+              <td>Welke onderdelen en voering horen bij deze variant?</td>
+            </tr>
+            <tr>
+              <th scope="row">Broeken en ondergoed</th>
+              <td>Taille, binnenbeenlengte, rekbaarheid en retourvoorwaarden.</td>
+              <td>Is de taillemaat ontspannen of uitgerekt gemeten?</td>
+            </tr>
+            <tr>
+              <th scope="row">Hoofddeksels en jerseys</th>
+              <td>Omtrek of pasvorm, uitvoering en plaatsing van details.</td>
+              <td>Toont de foto precies de geselecteerde uitvoering?</td>
+            </tr>
+            <tr>
+              <th scope="row">Sieraden en accessoires</th>
+              <td>Lengte, binnenomtrek, sluiting en materiaalopgave.</td>
+              <td>Welke herkomstgegevens en materiaalspecificaties zijn beschikbaar?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section faq-layout" aria-labelledby="faq-title">
+      <header>
+        <span class="eyebrow">Direct antwoord</span>
+        <h2 id="faq-title">Veelgestelde vragen.</h2>
+        <p>De kernvragen over de ACBuy spreadsheet, productbeelden en het gebruik van deze gids.</p>
+      </header>
+      <div>
+        <details open>
+          <summary>Wat is een ACBuy spreadsheet?</summary>
+          <p>Een ACBuy spreadsheet is een overzicht van productverwijzingen dat wordt gebruikt om artikelen te ontdekken en te vergelijken. Deze pagina biedt een Nederlandstalige lees- en koopgids met categorielinks naar cafans.com; er wordt hier geen spreadsheetbestand aangeboden.</p>
+        </details>
+        <details>
+          <summary>Waar brengen de links op deze pagina mij naartoe?</summary>
+          <p>De categorielinks openen de genoemde categorie op cafans.com. Alle overige klikbare links openen https://www.cafans.com. Deze pagina verwerkt geen bestellingen of betalingen.</p>
+        </details>
+        <details>
+          <summary>Hoe kies ik een maat bij sneakers en kleding?</summary>
+          <p>Vergelijk de maattabel van de exacte variant met je eigen metingen. Gebruik bij sneakers de voetlengte en de beschikbare binnenmaat; vergelijk kleding met een goed passend kledingstuk. Alleen een EU-maat of lettermaat is onvoldoende.</p>
+        </details>
+        <details>
+          <summary>Bewijzen QC-foto’s dat een merkartikel authentiek is?</summary>
+          <p>Nee. QC-foto’s kunnen zichtbare kenmerken, de gekozen variant en mogelijke afwijkingen tonen. Ze bewijzen geen authenticiteit, materiaalsamenstelling of levensduur. Vraag bij merkartikelen om controleerbare herkomstgegevens.</p>
+        </details>
+        <details>
+          <summary>Zijn de afgebeelde merkartikelen hier te bestellen?</summary>
+          <p>De afbeeldingen zijn stijlreferenties voor de uitleg. Ze bevestigen geen beschikbaarheid of identiek aanbod bij cafans.com. Controleer op de bestemming de actuele productomschrijving en de geselecteerde uitvoering.</p>
+        </details>
+        <details>
+          <summary>Hoe vergelijk ik verzendkosten naar Nederland of België?</summary>
+          <p>Vergelijk een offerte voor hetzelfde pakket, dezelfde bestemming en dezelfde verpakkingskeuze. Controleer het gebruikte gewicht, de pakketafmetingen, routevoorwaarden en eventuele extra kosten. Een artikelprijs alleen geeft geen compleet kostenoverzicht.</p>
+        </details>
+        <details>
+          <summary>Is deze gids officieel verbonden aan ACBuy of de genoemde merken?</summary>
+          <p>Nee. Dit is een onafhankelijke informatiepagina met verwijzingen naar cafans.com. Er wordt geen officiële samenwerking met ACBuy, Nike, Louis Vuitton, Gucci, Hermès of Dior geclaimd.</p>
+        </details>
+      </div>
+    </section>
+
+    <aside class="closing" aria-labelledby="closing-title">
+      <div>
+        <h2 id="closing-title">Maak ruimte voor een betere keuze.</h2>
+        <p>Begin met een categorie en neem je eigen maten en vragen mee.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">Verder naar cafans.com <span aria-hidden="true">↗</span></a>
+    </aside>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-top">
+      <a class="logo" href="https://www.cafans.com">cafans.com</a>
+      <span>Onafhankelijke Nederlandstalige productgids</span>
+    </div>
+    <p>Merknamen worden gebruikt om de afgebeelde stijlreferenties te beschrijven. Deze pagina biedt informatie en verwijzingen; controleer productdetails, herkomst, voorwaarden en actuele kosten bij de partij die de bestelling verwerkt.</p>
+  </footer>
+</body>
+</html>
